@@ -1,0 +1,62 @@
+[
+  {
+    "name": "oracle_home",
+    "description": "Location of the directory where the Oracle Database software is installed.",
+    "value": "/u02/app/oracle/product/19.0.0/dbhome_1/"
+  },
+  {
+    "name": "listener_port",
+    "description": "The port which the listener will use.",
+    "value": "1521"
+  },
+  {
+    "name": "grid_home",
+    "description": "Location of the directory where the Oracle Grid Infrastructure software is installed. This is an optional parameter.",
+    "value": "/u01/app/19.0.0/grid"
+  },
+  {
+    "name": "sys_asm_password",
+    "description": "THIS IS A SENSITIVE FIELD. If left blank, you would be prompted for input during command execution. The password for the SYS user of ASM.",
+    "value": "Nutanix$4u"
+  },
+  {
+    "name": "asm_driver",
+    "description": "Name of the ASM library to be used to create disk group.",
+    "value": "None"
+  },
+  {
+    "name": "create_era_drive",
+    "description": "If this is specified as 'true', an Era Drive (VG) will be created and mounted under 'era_deploy_base' path. This drive will be used for holding Era software/logs/config and also as a staging location for database logs. If it is specified as 'false', no new Era Drive (VG) will be created. Instead, the 'era_deploy_base' directory will be used for parking Era software/logs/config and the Database staging logs",
+    "value": "true"
+  },
+  {
+    "name": "era_deploy_base",
+    "description": "DO NOT CHANGE THIS VALUE. Base installation directory for ERA agent.",
+    "value": "/opt/era_base"
+  },
+  {
+    "name": "vm_password",
+    "description": "THIS IS A SENSITIVE FIELD. If left blank, you would be prompted for input during command execution. Password of the dbserver VM. Either the password or the ssh_private_key have to be provided",
+    "value": "Nutanix/4u"
+  },
+  {
+    "name": "vm_ssh_private_key",
+    "description": "Private ssh key for the dbserver VM. Either the password or the ssh_private_key have to be provided",
+    "value": ""
+  },
+  {
+    "name": "vm_username",
+    "description": "Username of the dbserver VM",
+    "value": "oracle"
+  },
+  {
+    "name": "working_dir",
+    "description": "A temporary directory which will be used to stage scripts and other artifacts. It will be deleted at the end of the cloning process. Example: /tmp, /var/opt/tmp, C:\\temp, etc",
+    "value": "/tmp"
+  },
+  {
+    "name": "application_type",
+    "value": "oracle_database",
+    "description": "The type of the application."
+  }
+]
