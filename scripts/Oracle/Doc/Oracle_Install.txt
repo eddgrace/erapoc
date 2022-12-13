@@ -1,0 +1,28 @@
+groupadd -g 54321 oinstall
+groupadd -g 54322 dba
+groupadd -g 54323 oper
+groupadd -g 54324 backupdba
+groupadd -g 54325 dgdba
+groupadd -g 54326 kmdba
+groupadd -g 54327 asmdba
+groupadd -g 54328 asmoper
+groupadd -g 54329 asmadmin
+groupadd -g 54330 racdba
+groupadd -g 54327 asmdba
+groupadd -g 54328 asmoper
+groupadd -g 54329 asmadmin
+useradd -u 54322 -g oinstall -G asmadmin,asmdba,asmoper,dba grid
+mkdir -p  /u01/app/19.0.0/grid
+mkdir -p /u01/app/grid
+chown -R grid:oinstall /u01/app/19.0.0/grid
+chown -R grid:oinstall /u01/app/grid
+chown grid:oinstall /u01/app/
+
+su - grid
+echo '
+export ORACLE_HOME=/u01/app/19.0.0/grid
+export ORACLE_BASE=/u01/app/grid
+export PATH=$ORACLE_HOME/bin:$PATH
+' >> $HOME/.bash_profile
+
+

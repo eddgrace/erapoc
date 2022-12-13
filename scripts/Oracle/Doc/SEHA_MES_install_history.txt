@@ -1,0 +1,48 @@
+ORACLE_HOME=/oracle/app/oracle/Oracle19C
+
+export ORACLE_BASE=/oracle/app/oracle
+export ORACLE_HOME=$ORACLE_BASE/Oracle19C
+export GRID_HOME=/grid
+export ORACLE_SID=MES
+
+$ORACLE_HOME/addnode/addnode.sh CLUSTER_NEW_NODES=hhtc-cimes-db-b1
+
+ASMCMD>  pwcopy --dbuniquename MES /oracle/app/oracle/Oracle19C/dbs/orapwMES +DATA/MES/PASSWORD/orapwMES -f
+copying /oracle/app/oracle/Oracle19C/dbs/orapwMES -> +DATA/MES/PASSWORD/orapwMES
+
+srvctl modify database -db MES -pwfile +DATA/MES/PASSWORD/orapwMES
+srvctl config database -db MES
+srvctl modify database -db MES -node hhtc-cimes-db-p1,hhtc-cimes-db-b1
+
+srvctl relocate database -d MES -n hhtc-cimes-db-b1 -w 1 -v
+
+
+srvctl relocate database -d MES -n hhtc-cimes-db-p1 -w 1 -v
+
+create tablespace MES     ;
+create tablespace MESAUTO ;
+create tablespace MESLOG  ;
+create tablespace MESIF   ;
+create tablespace WRP     ;
+create tablespace DMDATA  ;
+
+
+alter database datafile '+DATA/MES/DATAFILE/mes.275.1115487097' resize 100G;
+
+
+
+
+select file_name,tablespace_name, MAXBYTES , autoextensible from dba_data_files
+
+
+alter tablespace mes add datafile;
+alter tablespace mes add datafile;
+alter tablespace mes add datafile;
+
+alter tablespace MESAUTO add datafile;
+alter tablespace MESAUTO add datafile;
+alter tablespace MESAUTO add datafile;
+alter tablespace MESAUTO add datafile;
+
+alter tablespace DMDATA add datafile;
+

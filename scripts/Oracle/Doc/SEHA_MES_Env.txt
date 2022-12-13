@@ -1,0 +1,29 @@
+[oracle@hhtc-cimes-db-p1 admin]$   srvctl config database -db MES
+Database unique name: MES
+Database name: MES
+Oracle home: /oracle/app/oracle/Oracle19C
+Oracle user: oracle
+Spfile: +DATA/MES/PARAMETERFILE/spfile.272.1115486351
+Password file: +DATA/MES/PASSWORD/orapwMES
+Domain:
+Start options: open
+Stop options: immediate
+Database role: PRIMARY
+Management policy: AUTOMATIC
+Server pools:
+Disk Groups: DATA
+Mount point paths:
+Services:
+Type: SINGLE
+OSDBA group: oracle
+OSOPER group: oracle
+Database instance: MES
+Configured nodes: hhtc-cimes-db-p1,hhtc-cimes-db-b1
+CSS critical: no
+CPU count: 0
+Memory target: 0
+Maximum memory: 0
+Default network number for database services:
+Database is administrator managed
+
+

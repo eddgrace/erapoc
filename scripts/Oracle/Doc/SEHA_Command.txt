@@ -1,0 +1,32 @@
+
+ORACLE_BASE=/oracle/app/oracle
+ORACLE_HOME=$ORACLE_BASE/Oracle19C
+GRID_HOME=/grid
+ORACLE_SID=MES
+
+
+#列出資料庫版本
+
+ $GRID_HOME/OPatch/opatch lspatches -oh $GRID_HOME
+
+	
+#資料庫切換 切到P1
+ srvctl relocate database -d MES -n hhtc-cimes-db-p1 -w 1 -v
+
+
+#資料庫切換 切到B1
+ srvctl relocate database -d MES -n hhtc-cimes-db-b1 -w 1 -v
+ 
+#確認叢集服務
+ $GRID_HOME/bin/crsctl status res -t
+ 
+#確認叢集設定
+
+  srvctl config database -db MES
+
+rman target / <<EOF
+Delete noprompt archivelog until time 'sysdate -1’;
+EOF
+
+
+cd, du, find, ls, mkdir 
