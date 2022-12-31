@@ -1,6 +1,8 @@
 #!/bin/bash
 #
 # Default Container Identified
+export vLAN=`grep "Secondary VLAN:" Env.txt| awk '{print $3}'`
+
 cntr=`ncli container list | grep default-container | grep VStore | gawk -F: '{ printf("%s",$2);}' | cut -c2-`
 HPOCIP=(10.55.251.38 10.136.239.13 10.42.194.11)
 
