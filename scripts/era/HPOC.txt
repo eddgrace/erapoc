@@ -1,0 +1,42 @@
+Your Reservation Information for PHX-POC284 (NX-8170-G7).
+
+Reservation ID: 232654
+Start Date: 2022-12-31 09:00
+Stop Date: 2023-01-14 09:00
+Timezone: Asia/Taipei
+Reason: Customer POC
+POC Number: 00043869
+
+
+Cluster IP: https://10.38.56.37:9440/console/#login
+
+Position: A CVM IP: 10.38.56.29 Hypervisor IP: 10.38.56.25 IPMI IP: 10.38.56.33
+Position: A CVM IP: 10.38.56.30 Hypervisor IP: 10.38.56.26 IPMI IP: 10.38.56.34
+Position: A CVM IP: 10.38.56.31 Hypervisor IP: 10.38.56.27 IPMI IP: 10.38.56.35
+Position: A CVM IP: 10.38.56.32 Hypervisor IP: 10.38.56.28 IPMI IP: 10.38.56.36
+
+
+LOGIN CREDENTIALS
+
+Prism UI Credentials: admin/nx2Tech690!
+CVM Credentials: nutanix/nx2Tech690!
+Prism Central IP: 10.38.56.39
+Prism Central Credentials: admin / nx2Tech690!
+
+
+NETWORK INFORMATION
+
+Network IP Address / Prefix Length: 10.38.56.0/25
+Gateway IP Address: 10.38.56.1
+Nameserver IP: 10.42.196.10
+Subnet Mask: 255.255.255.128
+Address Range: 10.38.56.1 - 10.38.56.126
+
+Note: "Address Range" is here to simply save you a trip to a subnet calculator. Please be sure to pay attention to any IP reservations that may be used by products and VMs when assigning an IPAM range in Prism or static IPs to VMs. 
+SECONDARY NETWORK INFORMATION
+
+Secondary VLAN: 149
+Secondary Subnet: 255.255.255.128
+Secondary Gateway: 10.38.56.129
+Secondary IP Range: 10.38.56.132-254
+

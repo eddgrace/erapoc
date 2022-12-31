@@ -1,0 +1,2 @@
+export NDBServ=`ncli vm list name=EraServer |grep IP`
+sshpass ssh era@$NDBServ -c ncli vm list name=EraServer |grep IP
