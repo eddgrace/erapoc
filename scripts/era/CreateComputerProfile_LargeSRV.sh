@@ -1,6 +1,7 @@
 
+source ./Env.txt
 curl -k -X POST \
-	https://10.38.56.52/era/v0.9/profiles \
+	https://$EraServer/era/v0.9/profiles \
 	-H 'Content-Type: application/json' \
 	-H 'Authorization: Basic YWRtaW46bngyVGVjaDY5MCE=' \
 	-d \
