@@ -13,6 +13,8 @@ do
 echo "export $VMName"=`sshpass -p $Password ssh -n -o StrictHostKeyChecking=no admin@$CVM29 ncli vm ls name=${VMName}|grep IP|awk {'print $5'} |awk -F, {'print $1'}`>>Env.txt
 done<VMServer.list
 
+cat Env.txt |grep -v Password |awk {'print $2'}|awk -F= {'print $1,$2'} >> /etc/hosts
+
 ## Get Cluster ID
 source ./Env.txt
 
