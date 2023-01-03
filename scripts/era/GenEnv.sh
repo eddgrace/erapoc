@@ -1,5 +1,6 @@
 
 #!/bin/bash
+rpm -ivh sshpass-1.06-1.el7.x86_64.rpm
 
 echo >Env.txt
 grep "CVM IP" HPOC.txt | awk {'print $5'}|awk -F. {'print "export CVM"$4"="$0'} >> Env.txt
