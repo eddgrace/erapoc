@@ -1,0 +1,275 @@
+{
+  "provisionInfo": [
+    {
+      "name": "application_type",
+      "description": "The type of the database.",
+      "value": "oracle_database"
+    },
+    {
+      "name": "sys_asm_password",
+      "description": "THIS IS A SENSITIVE FIELD. If left blank, you would be prompted for input during command execution. The password for the SYS user of ASM.",
+      "value": "Nutanix.1"
+    },
+    {
+      "name": "dbserver_name",
+      "description": "Name of the VM to be created in Prism",
+      "value": "orasrv01"
+    },
+    {
+      "name": "dbserver_description",
+      "description": "Description of the VM to be created in Prism",
+      "value": "Oracle12c Single Server 001"
+    },
+    {
+      "name": "global_database_name",
+      "description": "The global name of the database.",
+      "value": "NTNXDB"
+    },
+    {
+      "name": "oracle_sid",
+      "description": "The SID of the new database that will be created as a result of the clone operation. The SID can have a maximum of 12 alphanumeric characters. The first character of the SID should be an alphabet.",
+      "value": "NTNXDB"
+    },
+    {
+      "name": "listener_port",
+      "description": "The port which the listener will use.",
+      "value": "1521"
+    },
+    {
+      "name": "database_size",
+      "description": "The writable space needed for the database.",
+      "value": "2000"
+    },
+    {
+      "name": "sys_password",
+      "description": "THIS IS A SENSITIVE FIELD. If left blank, you would be prompted for input during command execution. The password for the SYS user of the database.",
+      "value": "Nutanix.1"
+    },
+    {
+      "name": "system_password",
+      "description": "THIS IS A SENSITIVE FIELD. If left blank, you would be prompted for input during command execution. The password for the SYSTEM user of the database.",
+      "value": "Nutanix.1"
+    },
+    {
+      "name": "enable_tde",
+      "description": "Oracle Database uses authentication, authorization, and auditing mechanisms to secure data in the database, but not in the operating system data files where data is stored",
+      "value": "false"
+    },
+    {
+      "name": "tde_encryption_passphrase",
+      "description": "THIS IS A SENSITIVE FIELD. If left blank, you would be prompted for input during command execution. Encryption Pass Phrase to be used to encrypt data.",
+      "value": ""
+    },
+    {
+      "name": "db_character_set",
+      "description": "Database Character Set.",
+      "value": "AL32UTF8"
+    },
+    {
+      "name": "national_character_set",
+      "description": "National Character Set.",
+      "value": "AL16UTF16"
+    },
+    {
+      "name": "pre_create_script",
+      "description": "Full OS command that needs to be executed before creating the database. For example: /usr/bin/python /var/oracle/before_clone.py",
+      "value": ""
+    },
+    {
+      "name": "post_create_script",
+      "description": "Full OS command that needs to be executed after creating the database. For example: /usr/bin/python /var/oracle/after_clone.py",
+      "value": ""
+    },
+    {
+      "name": "working_dir",
+      "description": "A temporary directory which will be used to stage scripts and other artifacts. It will be deleted at the end of the provisioning process. Example: /tmp, /var/opt/tmp, C:/Temp, etc",
+      "value": "/tmp"
+    },
+    {
+      "name": "pre_rollback_command",
+      "description": "Full OS command that needs to be executed before rollback. For example: /usr/bin/python /var/oracle/after_clone.py",
+      "value": ""
+    },
+    {
+      "name": "enable_ha",
+      "description": "Enable High Availability services on Single instance hosts",
+      "value": "false"
+    },
+    {
+      "name": "scan_ips",
+      "description": "The SCAN IP addresses to be configured for the Cluster",
+      "value": ""
+    },
+    {
+      "name": "auto_tune_staging_drive",
+      "description": "Autoextend the Staging Drive.",
+      "value": "true"
+    },
+    {
+      "name": "enable_cdb",
+      "description": "Enable Container Datbase for Oracle Database.",
+      "value": "false"
+    },
+    {
+      "name": "pdb_name",
+      "description": "Name of the Pluggable Database.",
+      "value": ""
+    },
+    {
+      "name": "scan_name",
+      "description": "The SCAN name for the RAC.",
+      "value": ""
+    },
+    {
+      "name": "cluster_name",
+      "description": "Name of the RAC Cluster.",
+      "value": ""
+    },
+    {
+      "name": "database_fra_size",
+      "description": "The writable space needed for the database Fast Recovery Area.",
+      "value": "200"
+    },
+    {
+      "name": "asm_driver",
+      "description": "Name of the ASM library to be used to create disk group.",
+      "value": "None"
+    },
+    {
+      "name": "template_name",
+      "description": "The database template to be used for provisioning.",
+      "value": ""
+    },
+    {
+      "name": "db_block_size",
+      "description": "DB Block size",
+      "value": ""
+    },
+    {
+      "name": "management_vlan",
+      "description": "Management VLAN name",
+      "value": ""
+    },
+    {
+      "name": "delete_logs_older_than",
+      "description": "Archivelogs deletion policy",
+      "value": "0"
+    },
+    {
+      "name": "db_unique_name",
+      "description": "The Unique Name of the database.",
+      "value": "NTNXDB"
+    },
+    {
+      "name": "redo_log_size",
+      "description": "Redo log file size for the database in MB",
+      "value": "500"
+    },
+    {
+      "name": "no_of_redo_log_groups",
+      "description": "Number of redo log groups",
+      "value": "2"
+    },
+    {
+      "name": "dbserver_timezone",
+      "value": "UTC",
+      "description": "The timezone of the dbserver to be provisioned."
+    },
+    {
+      "name": "softwareProfileId",
+      "value": "c06533bb-ea01-487c-b01e-774e02844e82"
+    },
+    {
+      "name": "softwareProfileVersionId",
+      "value": "72f4b057-8d8d-4b5a-a21e-e92a65436dfc"
+    },
+    {
+      "name": "computeProfileId",
+      "value": "de514ff4-6c33-4360-8515-7ea67fcd61a8"
+    },
+    {
+      "name": "networkProfileId",
+      "value": "823b2097-8d72-4efd-8694-376a21eada49"
+    },
+    {
+      "name": "software_info",
+      "value": {
+        "oracle_home": "",
+        "oracle_base": "",
+        "grid_home": "",
+        "grid_base": "",
+        "orainv_loc": ""
+      }
+    },
+    {
+      "name": "vm_password",
+      "value": ""
+    },
+    {
+      "name": "dbParameterProfileId",
+      "value": "6af2d8f1-4aa4-4d90-b6e3-5cbb61503ec3"
+    },
+    {
+      "name": "createDbserver",
+      "value": "true"
+    },
+    {
+      "name": "nodeCount",
+      "value": 1
+    },
+    {
+      "name": "clustered",
+      "value": "false"
+    },
+    {
+      "name": "client_public_key",
+      "value": ""
+    },
+    {
+      "name": "nxClusterName",
+      "value": "EraCluster"
+    }
+  ],
+  "timeMachineInfo": {
+    "schedule": {
+      "snapshotTimeOfDay": {
+        "hours": 1,
+        "minutes": 0,
+        "seconds": 0
+      },
+      "continuousSchedule": {
+        "enabled": true,
+        "logBackupInterval": 30,
+        "snapshotsPerDay": 2
+      },
+      "weeklySchedule": {
+        "enabled": true,
+        "dayOfWeek": "SUNDAY"
+      },
+      "monthlySchedule": {
+        "enabled": true,
+        "dayOfMonth": 15
+      },
+      "quartelySchedule": {
+        "enabled": true,
+        "startMonth": "JANUARY",
+        "dayOfMonth": 15
+      },
+      "yearlySchedule": {
+        "enabled": false,
+        "dayOfMonth": 31,
+        "month": "DECEMBER"
+      }
+    },
+    "autoTuneLogDrive": true
+  },
+  "nodes": [
+    {
+      "properties": [],
+      "vmName": "",
+      "nxClusterName": null,
+      "computeProfileId": "de514ff4-6c33-4360-8515-7ea67fcd61a8",
+      "networkProfileId": "823b2097-8d72-4efd-8694-376a21eada49"
+    }
+  ]
+}

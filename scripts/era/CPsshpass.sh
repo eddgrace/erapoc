@@ -1,0 +1,4 @@
+. ./Env.txt
+
+sshpass :wq
+
