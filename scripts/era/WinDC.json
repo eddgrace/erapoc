@@ -13,7 +13,7 @@
     },
     {
       "name": "DOMAIN_USER_NAME",
-      "value": "eraop",
+      "value": "nutanix.local\\eraop",
       "secure": false,
       "description": "Username with permission to join computer to domain"
     },
@@ -37,7 +37,7 @@
     },
     {
       "name": "SQL_SERVICE_ACCOUNT_USER",
-      "value": "eraop",
+      "value": "nutanix.local\\dbop",
       "secure": false,
       "description": "Sql service account username"
     },
@@ -55,13 +55,13 @@
     },
     {
       "name": "ERA_WORKER_SERVICE_USER",
-      "value": "",
+      "value": "nutanix.local\\eradba",
       "secure": false,
       "description": "Era worker service account username"
     },
     {
       "name": "ERA_WORKER_SERVICE_PASSWORD",
-      "value": "",
+      "value": "Nutanix/4u",
       "secure": false,
       "description": "THIS IS A SENSITIVE FIELD. If left blank, you would be prompted for input during command execution. Era worker service account password"
     },
