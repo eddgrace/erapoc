@@ -1,0 +1,1 @@
+era -c "database provision engine=mysql_database provision_instance name=NTNXMYDB input_file=mysql.json sla="DEFAULT_OOB_GOLD_SLA""

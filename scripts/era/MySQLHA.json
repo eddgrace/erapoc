@@ -1,0 +1,194 @@
+{
+  "provisionInfo": [
+    {
+      "name": "application_type",
+      "description": "The type of the database.",
+      "value": "mysql_database"
+    },
+    {
+      "name": "cluster_name",
+      "description": "Name of the Physical DbServer Cluster.",
+      "value": "MySQLCRS"
+    },
+    {
+      "name": "cluster_description",
+      "description": "Description of the Physical DbServer Cluster.",
+      "value": ""
+    },
+    {
+      "name": "replication_password",
+      "description": "THIS IS A SENSITIVE FIELD. If left blank, you would be prompted for input during command execution. Replication user password will be used to create communication b/w master and replica.",
+      "value": "repl_password"
+    },
+    {
+      "name": "listener_port",
+      "description": "The port which the listener will use.",
+      "value": "3306"
+    },
+    {
+      "name": "database_names",
+      "description": "Comma separated list of database names to be provisioned",
+      "value": "NTNXMYDB"
+    },
+    {
+      "name": "database_size",
+      "description": "The writable space needed for the database.",
+      "value": "200"
+    },
+    {
+      "name": "db_password",
+      "description": "THIS IS A SENSITIVE FIELD. If left blank, you would be prompted for input during command execution. The password for the SYS user of the database.",
+      "value": "Nutanix/4u"
+    },
+    {
+      "name": "pre_create_script",
+      "description": "Full OS command that needs to be executed before creating the database. For example: /usr/bin/python /var/oracle/before_clone.py",
+      "value": ""
+    },
+    {
+      "name": "post_create_script",
+      "description": "Full OS command that needs to be executed after creating the database. For example: /usr/bin/python /var/oracle/after_clone.py",
+      "value": ""
+    },
+    {
+      "name": "dbserver_description",
+      "description": "Description of the VM to be created in Prism",
+      "value": ""
+    },
+    {
+      "name": "ssh_public_key",
+      "description": "The file path of the public key to be used for the VM.",
+      "value": ""
+    },
+    {
+      "name": "auto_tune_staging_drive",
+      "description": "Autoextend the Staging Drive.",
+      "value": "true"
+    },
+    {
+      "name": "replication_user",
+      "description": "Replication user will be used to create communcation b/w master and replica.",
+      "value": "repl"
+    },
+    {
+      "name": "dbserver_timezone",
+      "value": "Asia/Taipei",
+      "description": "The timezone of the dbserver to be provisioned."
+    },
+    {
+      "name": "softwareProfileId",
+      "value": "918e2358-0625-42bc-977d-32adf292ba59"
+    },
+    {
+      "name": "softwareProfileVersionId",
+      "value": "01f21159-b01d-4d4e-99db-f237259ce9ee"
+    },
+    {
+      "name": "computeProfileId",
+      "value": "5e90aa3e-4a3f-49d5-966d-a294edf5acd6"
+    },
+    {
+      "name": "networkProfileId",
+      "value": "470e9d45-d376-4403-9c31-0f75d0a9d753"
+    },
+    {
+      "name": "vm_password",
+      "value": "Nutanix/4u"
+    },
+    {
+      "name": "dbParameterProfileId",
+      "value": "a1ce58ec-7bcb-4089-bfce-2544df7fdb3b"
+    },
+    {
+      "name": "createDbserver",
+      "value": "true"
+    },
+    {
+      "name": "nodeCount",
+      "value": 2
+    },
+    {
+      "name": "clustered",
+      "value": "true"
+    },
+    {
+      "name": "client_public_key",
+      "value": "/home/era/id_rsa.pub"
+    },
+    {
+      "name": "nxClusterName",
+      "value": "EraCluster"
+    }
+  ],
+  "timeMachineInfo": {
+    "schedule": {
+      "snapshotTimeOfDay": {
+        "hours": 1,
+        "minutes": 0,
+        "seconds": 0
+      },
+      "continuousSchedule": {
+        "enabled": true,
+        "logBackupInterval": 30,
+        "snapshotsPerDay": 2
+      },
+      "weeklySchedule": {
+        "enabled": true,
+        "dayOfWeek": "SUNDAY"
+      },
+      "monthlySchedule": {
+        "enabled": true,
+        "dayOfMonth": 15
+      },
+      "quartelySchedule": {
+        "enabled": true,
+        "startMonth": "JANUARY",
+        "dayOfMonth": 15
+      },
+      "yearlySchedule": {
+        "enabled": false,
+        "dayOfMonth": 31,
+        "month": "DECEMBER"
+      }
+    },
+    "autoTuneLogDrive": true
+  },
+  "nodes": [
+    {
+      "properties": [
+        {
+          "name": "node_type",
+          "description": "Is this a database node (database) ?.",
+          "value": "database"
+        },
+        {
+          "name": "role",
+          "description": "Role of the Database Server (Master/Replica).",
+          "value": ""
+        }
+      ],
+      "vmName": "MYDBSRV01",
+      "nxClusterName": null,
+      "computeProfileId": "5e90aa3e-4a3f-49d5-966d-a294edf5acd6",
+      "networkProfileId": "470e9d45-d376-4403-9c31-0f75d0a9d753"
+    },
+    {
+      "properties": [
+        {
+          "name": "node_type",
+          "description": "Is this a database node (database) ?.",
+          "value": "database"
+        },
+        {
+          "name": "role",
+          "description": "Role of the Database Server (Master/Replica).",
+          "value": ""
+        }
+      ],
+      "vmName": "MYDBSRV02",
+      "nxClusterName": null,
+      "computeProfileId": "5e90aa3e-4a3f-49d5-966d-a294edf5acd6",
+      "networkProfileId": "470e9d45-d376-4403-9c31-0f75d0a9d753"
+    }
+  ]
+}
