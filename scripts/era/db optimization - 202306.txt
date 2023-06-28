@@ -1,0 +1,25 @@
+Today, I would like to introduce the exciting developments in the field of databases and infrastructure. Our goal is to drive the adoption of more databases on Nutanix, indirectly promoting the use of Nutanix Database Service (NDB) and AOS (Acropolis Operating System) attach. To achieve this goal, we need to address key barriers such as database licensing and performance, ultimately accelerating the modernization of the three-tier architecture.
+
+One of Nutanix's distinctive features is its disaggregated storage architecture. Unlike traditional hyper-converged infrastructure (HCI), Nutanix does not allow the combination of storage and computing on the same node. Instead, it supports pure compute (CO) nodes that can run on AHV (Acropolis Hypervisor) or ESXi. In fact, the latest release of AOS version 6.6.2 introduces ESXi CO + AHV SO (Storage Only) support, and AOS 6.7 brings AHV CO + AHV SO support. This flexibility allows organizations to choose their preferred management approach while still benefiting from Nutanix's advantages.
+
+In addition to CO nodes, Nutanix also offers pure storage (SO) nodes designed for high performance and leveraging SSD and NVMe technologies. These SO nodes provide performance comparable to HCI and traditional three-tier architectures, offering organizations the best of both worlds.
+
+But it's not just about performance; manageability is equally important. Nutanix provides comprehensive support for managing your infrastructure, including lifecycle management (LCM), infrastructure scaling, node removal, high availability (HA), and network segmentation. These features ensure that your Nutanix environment remains scalable, flexible, and easy to manage.
+
+Now, let's talk about Nutanix Database Service (NDB) and its support for the complete lifecycle of Tier 0 and Tier 1 databases. NDB supports a wide range of databases, including Oracle, SQL, Postgres, and more. With NDB, organizations can leverage the power of Nutanix's capabilities while seamlessly managing and scaling their mission-critical databases.
+
+By addressing the barriers of database licensing and performance, Nutanix enables organizations to replace their three-tier architecture with a more efficient and simplified infrastructure. The combination of disaggregated storage architecture, compute-only and storage-only nodes, and comprehensive manageability support make Nutanix an attractive choice for organizations looking to modernize their database infrastructure.
+
+In conclusion, the future of databases lies in the hands of Nutanix and its innovative infrastructure approach. With support for mission-critical databases, comprehensive manageability features, and performance comparable to HCI and traditional three-tier architectures, Nutanix is leading the way toward a more efficient and scalable database ecosystem.
+
+		How it works.
+
+In the Nutanix architecture we are discussing, a single cluster is formed by combining compute-only (CO) nodes and storage-only (SO) nodes. The CO nodes can be either ESXi or AHV, while the SO nodes will always be AHV.
+
+If the CO node is ESXi, the cluster is treated as a mixed hypervisor cluster, with ESXi as the dominant hypervisor. In this configuration, all Prism VM management operations will be performed using vCenter, the management platform for ESXi.
+
+On the other hand, if the CO node is AHV, the cluster is treated as an AHV cluster, utilizing Nutanix's native hypervisor.
+
+The storage provided by the SO nodes can be accessed on the ESXi CO nodes using NFS (Network File System) and iSCSI (Internet Small Computer System Interface) protocols. To create a User VM (UVM) on an ESXi node, the storage container from the SO nodes will be mounted on the ESXi host. The UVM will utilize the NFS protocol for storage access. Additionally, UVMs can also have in-guest attached iSCSI disks, utilizing the iSCSI protocol, as illustrated in the provided diagram.
+
+This architecture provides flexibility in choosing the hypervisor for the CO nodes while leveraging the high-performance storage provided by the SO nodes. By utilizing both NFS and iSCSI protocols, organizations can optimize storage access and cater to the specific requirements of their business-critical applications.
