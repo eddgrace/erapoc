@@ -18,4 +18,4 @@ era -c "profile software create engine=oracle_database nx_cluster_id=${ClusterID
 era -c "profile software create engine=oracle_database nx_cluster_id=${ClusterID} dbserver_ip=${Oracle19c_Source} name=Oracle19c_Source" 
 era -c "profile software create engine=sqlserver_database nx_cluster_id=${ClusterID} dbserver_ip=${SQL2016_Source} name=SQL2016_Source" 
 era -c "profile software create engine=sqlserver_database nx_cluster_id=${ClusterID} dbserver_ip=${SQL2019_Source} name=SQL2019_Source" 
-era -c " profile windows_domain create name=NTNX input_file=WinDC.json"
+era -c "profile windows_domain create name=NTNX input_file=WinPDC.json"

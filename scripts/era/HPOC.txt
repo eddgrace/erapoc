@@ -1,48 +1,39 @@
-Your Reservation Information for PHX-POC185 (NX-3060-G5).
 
-Reservation ID: 239139
-Start Date: 2023-02-14 12:00
-Stop Date: 2023-02-28 12:00
+Reservation ID: 258589
+Start Date: 2023-07-11 09:00
+Stop Date: 2023-07-25 09:00
 Timezone: Asia/Taipei
 Reason: Customer POC
-POC Number: 00044414
+POC Number: 00046091
 
 
-Cluster IP: https://10.38.185.37:9440/console/#login
+Cluster IP: https://10.54.74.37:9440/console/#login
 
-Position: A CVM IP: 10.38.185.29 Hypervisor IP: 10.38.185.25 IPMI IP: 10.38.185.33
-Position: B CVM IP: 10.38.185.30 Hypervisor IP: 10.38.185.26 IPMI IP: 10.38.185.34
-Position: C CVM IP: 10.38.185.31 Hypervisor IP: 10.38.185.27 IPMI IP: 10.38.185.35
-Position: D CVM IP: 10.38.185.32 Hypervisor IP: 10.38.185.28 IPMI IP: 10.38.185.36
+Position: A CVM IP: 10.54.74.29 Hypervisor IP: 10.54.74.25 IPMI IP: 10.54.74.33
+Position: A CVM IP: 10.54.74.30 Hypervisor IP: 10.54.74.26 IPMI IP: 10.54.74.34
+Position: A CVM IP: 10.54.74.31 Hypervisor IP: 10.54.74.27 IPMI IP: 10.54.74.35
+Position: A CVM IP: 10.54.74.32 Hypervisor IP: 10.54.74.28 IPMI IP: 10.54.74.36
 
 
 LOGIN CREDENTIALS
 
-Prism UI Credentials: admin/nx2Tech690!
-CVM Credentials: nutanix/nx2Tech690!
+Prism UI Credentials: admin/nx2Tech369!
+CVM Credentials: nutanix/nx2Tech369!
 
 NETWORK INFORMATION
 
-Network IP Address / Prefix Length: 10.38.185.0/25
-Gateway IP Address: 10.38.185.1
-Nameserver IP: 10.42.194.10
+Network IP Address / Prefix Length: 10.54.74.0/25
+Gateway IP Address: 10.54.74.1
+Nameserver IP: 10.54.1.5
 Subnet Mask: 255.255.255.128
-Address Range: 10.38.185.1 - 10.38.185.126
+Address Range: 10.54.74.1 - 10.54.74.126
 
 Note: "Address Range" is here to simply save you a trip to a subnet calculator. Please be sure to pay attention to any IP reservations that may be used by products and VMs when assigning an IPAM range in Prism or static IPs to VMs. 
 SECONDARY NETWORK INFORMATION
 
-Secondary VLAN: 1853
+Secondary VLAN: 1169
 Secondary Subnet: 255.255.255.128
-Secondary Gateway: 10.38.185.129
-Secondary IP Range: 10.38.185.132-254
-
-HOSTED POC LAB - ACCESS INSTRUCTIONS
-Access to the Nutanix Hosted POC Lab environment is available via virtual desktops (Parallels/Frame) or via VPN.
+Secondary Gateway: 10.54.74.129
+Secondary IP Range: 10.54.74.132-254
 
 
--------------------------
-Lab Access User Credentials
--------------------------
-20 x VDI/VPN User Accounts: PHX-POC185-User01, PHX-POC185-User02 … PHX-POC185-User20 etc.
-VDI/VPN User Password: nx2Tech690!
