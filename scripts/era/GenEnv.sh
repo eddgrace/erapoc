@@ -19,5 +19,5 @@ sudo cat Env.txt |grep -v Password |awk {'print $2'}|awk -F= {'print $1,$2'} >> 
 ## Get Cluster ID
 source ./Env.txt
 
-sudo  echo "export ClusterID"=`sshpass -p Nutanix.1 ssh -o StrictHostKeyChecking=no era@$EraServer era -c '"cluster list"|head -9|tail -1'|awk {'print $2'}` >>Env.txt
+echo "export ClusterID=`era -c "cluster list"|head -9|tail -1|awk {'print $2'}`" >>Env.txt
 
