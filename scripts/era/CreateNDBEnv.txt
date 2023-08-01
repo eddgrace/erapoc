@@ -185,3 +185,5 @@ acli vm.on Oracle12c_SIHA
 acli image.create SQL2014SP3 image_type=kIsoImage source_url=http://$HPOC/workshop_staging/SQLServer2014SP3.iso container=Images &
 acli image.create CentOS7 image_type=kIsoImage source_url=http://$HPOC/workshop_staging/CentOS7.iso container=Images &
 
+
+
