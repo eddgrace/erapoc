@@ -1,0 +1,226 @@
+ yum install -y bzip2 wget boost-atomic libicu boost-regex boost-serialization boost-signals boost-system boost-test boost-thread boost-timer boost-wave boost-chrono boost-context boost-date-time boost-filesystem boost-graph  boost-iostreams boost-locale boost-math boost-program-options boost-python boost-random
+
+
+
+wget https://download.postgresql.org/pub/repos/yum/common/redhat/rhel-7-x86_64/SFCGAL-1.3.1-2.rhel7.x86_64.rpm --no-check-certificate
+wget https://download.postgresql.org/pub/repos/yum/common/redhat/rhel-7-x86_64/SFCGAL-libs-1.3.1-2.rhel7.x86_64.rpm --no-check-certificate
+wget https://download.postgresql.org/pub/repos/yum/common/redhat/rhel-7-x86_64/CGAL-4.7-1.rhel7.1.x86_64.rpm --no-check-certificate
+wget http://mirror.centos.org/centos/7/os/x86_64/Packages/mesa-libGLU-9.0.0-4.el7.x86_64.rpm --no-check-certificate
+wget http://mirror.centos.org/centos/7/os/x86_64/Packages/boost-1.53.0-28.el7.x86_64.rpm --no-check-certificate
+wget http://mirror.centos.org/centos/7/os/x86_64/Packages/boost-atomic-1.53.0-28.el7.x86_64.rpm --no-check-certificate
+wget https://download.postgresql.org/pub/repos/yum/common/redhat/rhel-7-x86_64/gdal34-libs-3.4.3-3.rhel7.x86_64.rpm --no-check-certificate
+wget http://mirror.centos.org/centos/7/os/x86_64/Packages/libglvnd-glx-1.0.1-0.8.git5baa1e5.el7.x86_64.rpm
+wget https://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/f/freexl-1.0.6-3.el7.x86_64.rpm
+wget https://download.postgresql.org/pub/repos/yum/common/redhat/rhel-7-x86_64/libgeotiff16-1.6.0-6.rhel7.x86_64.rpm --no-check-certificate
+wget https://download.postgresql.org/pub/repos/yum/common/redhat/rhel-7-x86_64/libgeotiff16-devel-1.6.0-6.rhel7.x86_64.rpm --no-check-certificate
+wget https://download.postgresql.org/pub/repos/yum/common/redhat/rhel-7-x86_64/libspatialite43-4.3.0a-15.rhel7.x86_64.rpm --no-check-certificate
+wget https://download.postgresql.org/pub/repos/yum/common/redhat/rhel-7-x86_64/libspatialite43-devel-4.3.0a-15.rhel7.x86_64.rpm  --no-check-certificate
+wget https://download.postgresql.org/pub/repos/yum/common/redhat/rhel-7-x86_64/geos39-3.9.2-1.rhel7.x86_64.rpm --no-check-certificate
+wget https://download.postgresql.org/pub/repos/yum/common/redhat/rhel-7-x86_64/ogdi41-4.1.0-2.rhel7.x86_64.rpm --no-check-certificate
+wget http://mirror.centos.org/centos/7/os/x86_64/Packages/openjpeg2-2.3.1-3.el7_7.x86_64.rpm
+wget http://mirror.centos.org/centos/7/os/x86_64/Packages/pcre2-10.23-2.el7.x86_64.rpm
+wget https://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/l/libzstd-1.5.5-1.el7.x86_64.rpm
+wget https://download.postgresql.org/pub/repos/yum/common/redhat/rhel-7-x86_64/geos310-3.10.3-1.rhel7.x86_64.rpm --no-check-certificate
+wget https://download.postgresql.org/pub/repos/yum/common/redhat/rhel-7-x86_64/proj72-7.2.1-1.rhel7.x86_64.rpm --no-check-certificate
+wget https://download.postgresql.org/pub/repos/yum/common/redhat/rhel-7-x86_64/sqlite33-libs-3.30.1-6.rhel7.x86_64.rpm --no-check-certificate
+wget https://download.postgresql.org/pub/repos/yum/common/redhat/rhel-7-x86_64/sqlite33-3.30.1-6.rhel7.x86_64.rpm  --no-check-certificate
+wget https://download.postgresql.org/pub/repos/yum/13/redhat/rhel-7-x86_64/postgis32_13-3.2.5-1.rhel7.x86_64.rpm --no-check-certificate
+wget https://download.osgeo.org/postgis/source/postgis-3.2.5.tar.gz --no-check-certificate
+
+
+yum -y install gcc-c++
+rpm -ivh boost-1.53.0-28.el7.x86_64.rpm
+yum -y install mesa-libGL
+rpm -ivh mesa-libGLU-9.0.0-4.el7.x86_64.rpm
+yum -y install libICE libSM
+
+rpm -ivh CGAL-4.7-1.rhel7.1.x86_64.rpm
+rpm -ivh SFCGAL-*
+!!!yum install -y armadillo*
+yum -y install libtiff-devel
+rpm -ivh pcre2-10.23-2.el7.x86_64.rpm
+rpm -ivh libzstd-1.5.5-1.el7.x86_64.rpm
+rpm -ivh geos39-3.9.2-1.rhel7.x86_64.rpm
+
+rpm -ivh sqlite33-3.30.1-6.rhel7.x86_64.rpm sqlite33-libs-3.30.1-6.rhel7.x86_64.rpm sqlite33-3.30.1-6.rhel7.x86_64.rpm
+rpm -ivh proj72-7.2.1-1.rhel7.x86_64.rpm
+rpm -ivh freexl-1.0.6-3.el7.x86_64.rpm
+rpm -ivh libspatialite43-*
+rpm -ivh openjpeg2-2.3.1-3.el7_7.x86_64.rpm
+rpm -ivh ogdi41-4.1.0-2.rhel7.x86_64.rpm
+yum -y install libxml2-devel
+
+ 
+#CMAKE 
+ wget https://github.com/Kitware/CMake/releases/download/v3.27.0/cmake-3.27.0.tar.gz
+
+tar -zxvf cmake-3.27.0.tar.gz
+
+cd cmake-3.27.0
+yum -y install openssl-devel
+./bootstrap && make && sudo make install
+ 
+cd
+
+ 
+#GEOS
+wget https://download.osgeo.org/geos/geos-3.8.3.tar.bz2 --no-check-certificate
+
+bzip2 -d geos-3.8.3.tar.bz2
+
+tar -xvf geos-3.8.3.tar
+
+cd geos-3.8.3
+
+cmake -DCMAKE_BUILD_TYPE=3.8.3
+make
+make install
+
+cd
+
+
+#SQLite
+
+wget https://www.sqlite.org/2020/sqlite-autoconf-3310100.tar.gz --no-check-certificate
+
+ tar -zxvf sqlite-autoconf-3310100.tar.gz
+ 
+ cd sqlite-autoconf-3310100
+ 
+ ./configure
+ make
+ make install
+ 
+# gmp-devel
+
+sudo yum -y install gmp-devel
+yum -y install mpfr-devel 
+
+#mpc
+
+wget https://ftp.gnu.org/gnu/mpc/mpc-1.0.3.tar.gz --no-check-certificate
+
+tar -zxvf mpc-1.0.3.tar.gz
+cd mpc-1.0.3/
+
+./configure
+make
+
+
+#gtest
+
+yum-config-manager --enable rhel-server-rhscl-7-rpms
+
+cmake -S . -B build
+
+cmake --build build
+
+
+
+#PROJ
+
+wget https://download.osgeo.org/proj/proj-9.2.0.tar.gz --no-check-certificate
+
+tar -zxvf proj-9.2.0.tar.gz
+
+yum -y install libcurl-devel
+
+
+cd proj-9.2.0
+
+    mkdir build
+    cd build
+##    cmake ..
+ cmake -D BUILD_TESTING=NO ..
+
+    cmake --build .
+    cmake --build . --target install
+
+
+
+
+
+
+#POSTGIS
+
+tar -zxvf postgis-3.2.5.tar.gz
+
+ cd postgis-3.2.5
+yum install proj-devel
+
+
+./configure --with-pgconfig=//usr/pgsql-13/bin/pg_config
+
+
+
+
+
+
+#c++ 14
+
+ wget http://ftp.gnu.org/gnu/gcc/gcc-9.5.0/gcc-9.5.0.tar.gz
+
+# install readline-devel
+
+yum -y install readline-devel
+
+
+
+# Postgres 13 source 
+
+wget https://ftp.postgresql.org/pub/source/v13.10/postgresql-13.10.tar.gz --no-check-certificate
+
+ tar -zxvf postgresql-13.10.tar.gz
+
+ cd postgresql-13.10/
+
+   ./configure
+    make
+    su
+    make install
+    adduser postgres
+    mkdir /usr/local/pgsql/data
+    chown postgres /usr/local/pgsql/data
+    su - postgres
+    /usr/local/pgsql/bin/initdb -D /usr/local/pgsql/data
+    /usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data -l logfile start
+    /usr/local/pgsql/bin/createdb test
+    /usr/local/pgsql/bin/psql test
+
+
+
+#POSTGIS
+
+
+tar -zxvf postgis-3.2.5.tar.gz
+
+ cd postgis-3.2.5
+yum install proj-devel
+
+
+./configure --with-pgconfig=//usr/pgsql-13/bin/pg_config
+
+
+
+
+
+
+
+#Install Postgres 14
+#Group File
+https://yum.postgresql.org/14/redhat/rhel-7-x86_64/repoview/postgresqldbserver14.group.html
+
+#Download
+wget https://yum.postgresql.org/14/redhat/rhel-7-x86_64/postgresql14-server-14.8-1PGDG.rhel7.x86_64.rpm --no-check-certificate
+wget https://yum.postgresql.org/14/redhat/rhel-7-x86_64/postgresql14-contrib-14.8-1PGDG.rhel7.x86_64.rpm --no-check-certificate
+wget https://yum.postgresql.org/14/redhat/rhel-7-x86_64/postgresql14-libs-14.8-1PGDG.rhel7.x86_64.rpm --no-check-certificate
+wget https://yum.postgresql.org/14/redhat/rhel-7-x86_64/postgresql14-14.8-1PGDG.rhel7.x86_64.rpm  --no-check-certificate
+
+
+
+
+
+
+sqlite33-3.30.1-6.rhel7.x86_64.rpm
+sqlite33-libs-3.30.1-6.rhel7.x86_64.rpm
+

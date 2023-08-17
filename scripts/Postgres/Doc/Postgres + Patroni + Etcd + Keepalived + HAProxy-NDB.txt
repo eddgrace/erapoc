@@ -1,0 +1,129 @@
+
+# use root to install 
+
+yum -y install epel-release
+
+yum info epel-release
+
+
+ yum update
+
+
+useradd -m -d /home/postgres postgres
+
+useradd -m -d /home/ndbuser ndbuser
+
+passwd ndbuser
+
+passwd postgres
+
+
+sudo vi /etc/sudoers
+
+#Install for HA: ndbuser
+
+sudo yum -y install python36 python3-devel
+
+
+
+#pip3 Install
+
+sudo yum -y install python3-pip
+sudo python3 -m pip install --upgrade pip
+python3 -m pip --version
+
+## pip 21.3.1 from /usr/local/lib/python3.6/site-packages/pip (python 3.6)
+
+sudo yum install -y wget zip unzip curl net-tools sshpass gcc rsync iptables-services lsof readline-devel zlib-devel
+
+sudo yum install -y rpcbind showmount haproxy*1.5*
+
+#Install Patroni Dependencies
+
+sudo python3 -m pip install urllib3==1.24.2
+sudo python3 -m pip install psycopg2-binary==2.8.6
+
+ wget https://ftp.postgresql.org/pub/source/v13.10/postgresql-13.10.tar.gz --no-check-certificate
+  tar -zxvf postgresql-13.10.tar.gz
+
+cd postgresql-13.10
+
+mkdir -p /usr/pgsql-13/
+
+
+
+./configure --help
+./configure --prefix=/usr/pgsql-13/
+make
+make all
+make world
+make install
+make install-world
+
+# Install Patroni
+
+sudo python3 -m pip install patroni[etcd]==2.1.1
+
+sudo ln -s /usr/local/bin/patroni /usr/bin/patroni
+sudo ln -s /usr/local/bin/patronictl /usr/bin/patronictl
+
+python3 -m pip show patroni
+
+sudo python3 -m pip install -U setuptools
+
+# Install ETCD
+
+sudo python3 -m pip install etcd3==0.10.0
+sudo python3 -m pip show etcd3
+
+sudo yum install -y etcd-3.3.11
+ 
+	OR 
+
+ wget http://mirror.centos.org/centos/7/extras/x86_64/Packages/etcd-3.3.11-2.el7.centos.x86_64.rpm
+
+
+
+
+
+# remove default setting
+
+sudo rm -rf /var/lib/etcd/*
+
+sudo rm -rf /etc/etcd/etcd.yml
+
+#disable etcd service
+sudo systemctl disable etcd
+
+#Remove etcd default service file if present:
+sudo rm -rf /etc/systemd/system/etcd.service
+
+# Install Keepalived
+
+sudo systemctl start iptables
+
+sudo yum install -y keepalived
+
+# Install Firewalld
+
+sudo yum install -y firewalld
+
+# SELinux Disable
+
+setenforce 0
+vi /etc/selinux/config
+
+
+
+# install POSTGIS
+
+wget https://download.osgeo.org/postgis/source/postgis-3.3.3.tar.gz --no-check-certificate
+
+
+
+
+
+
+
+ 
+

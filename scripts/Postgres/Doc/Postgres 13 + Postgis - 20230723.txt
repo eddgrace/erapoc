@@ -1,0 +1,95 @@
+
+
+sudo yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
+sudo yum install -y postgresql13-server
+sudo /usr/pgsql-13/bin/postgresql-13-setup initdb
+
+
+
+wget https://download.postgresql.org/pub/repos/yum/13/redhat/rhel-7-x86_64/postgis32_13-3.2.5-1.rhel7.x86_64.rpm --no-check-certificate
+wget https://download.postgresql.org/pub/repos/yum/common/redhat/rhel-7-x86_64/SFCGAL-1.3.1-2.rhel7.x86_64.rpm --no-check-certificate
+wget https://download.postgresql.org/pub/repos/yum/common/redhat/rhel-7-x86_64/SFCGAL-libs-1.3.1-2.rhel7.x86_64.rpm --no-check-certificate
+wget https://download.postgresql.org/pub/repos/yum/common/redhat/rhel-7-x86_64/gdal34-libs-3.4.3-3.rhel7.x86_64.rpm --no-check-certificate
+wget https://download.postgresql.org/pub/repos/yum/common/redhat/rhel-7-x86_64/geos310-3.10.3-1.rhel7.x86_64.rpm --no-check-certificate
+wget https://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/h/hdf5-1.8.12-13.el7.x86_64.rpm
+wget https://download.postgresql.org/pub/repos/yum/common/redhat/rhel-7-x86_64/proj72-7.2.1-1.rhel7.x86_64.rpm --no-check-certificate
+
+wget https://download.postgresql.org/pub/repos/yum/13/redhat/rhel-7-x86_64/postgresql13-contrib-13.11-1PGDG.rhel7.x86_64.rpm --no-check-certificate
+
+
+wget https://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-14.noarch.rpm
+rpm -Uvh epel-release-7-14.noarch.rpm
+
+sudo yum localinstall postgis32_13-3.2.5-1.rhel7.x86_64.rpm
+
+
+
+
+psql -U postgres -h 10.54.60.106 -p 5432 ntnxdb003
+
+
+
+####################  History ########################
+
+sudo su -
+    2  sudo yum install -y postgresql13-server
+    3  sudo /usr/pgsql-13/bin/postgresql-13-setup initdb
+    6  rpm -ivh postgis32_13-3.2.5-1.rhel7.x86_64.rpm
+    7  wget https://download.postgresql.org/pub/repos/yum/common/redhat/rhel-7-x86_64/SFCGAL-1.3.1-2.rhel7.x86_64.rpm --no-check-certificate
+    8  wget https://download.postgresql.org/pub/repos/yum/common/redhat/rhel-7-x86_64/SFCGAL-libs-1.3.1-2.rhel7.x86_64.rpm --no-check-certificate
+    9  wget https://download.postgresql.org/pub/repos/yum/common/redhat/rhel-7-x86_64/gdal34-libs-3.4.3-3.rhel7.x86_64.rpm --no-check-certificate
+   10  wget https://download.postgresql.org/pub/repos/yum/common/redhat/rhel-7-x86_64/geos310-3.10.3-1.rhel7.x86_64.rpm --no-check-certificate
+   11  history
+   12  wget https://download.postgresql.org/pub/repos/yum/13/redhat/rhel-7-x86_64/postgis32_13-3.2.5-1.rhel7.x86_64.rpm --no-check-certificate
+   17  wget https://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/h/hdf5-1.8.12-13.el7.x86_64.rpm
+   18  ls
+   19  ls *.1
+   20  rm *.1
+   21  ls
+   22  rpm -qa|grep postgres
+   23  ls
+   24  wget https://download.postgresql.org/pub/repos/yum/common/redhat/rhel-7-x86_64/proj72-7.2.1-1.rhel7.x86_64.rpm --no-check-certificate
+   25  ls
+   26  yum localinstall postgis32_13-3.2.5-1.rhel7.x86_64.rpm
+   27  sudo yum localinstall postgis32_13-3.2.5-1.rhel7.x86_64.rpm
+   28  wget https://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-14.noarch.rpm
+   29  sudo rpm -Uvh epel-release-7-14.noarch.rpm
+   30  sudo yum localinstall postgis32_13-3.2.5-1.rhel7.x86_64.rpm
+   31  history
+   32  sudo su -
+
+
+############  After provision successful, install HA components ##################
+
+
+ sudo yum -y install python36 python3-devel
+ sudo yum -y install python3-pip
+ python3 -m pip install --upgrade pip
+ sudo python3 -m pip install --upgrade pip
+ python3 -m pip --version
+ yum install wget zip unzip curl net-tools sshpass gcc rsync iptables-services lsof readline-devel zlib-devel
+ sudo yum install -y wget zip unzip curl net-tools sshpass gcc rsync iptables-services lsof readline-devel zlib-devel
+ history
+ sudo yum install -y rpcbind showmount haproxy*1.5*
+ sudo python3 -m pip install urllib3==1.24.2
+ sudo python3 -m pip install psycopg2-binary==2.8.6
+ sudo python3 -m pip install patroni[etcd]==2.1.1
+ ln -s /usr/local/bin/patroni /usr/bin/patroni
+ ln -s /usr/local/bin/patronictl /usr/bin/patronictl
+ sudo ln -s /usr/local/bin/patroni /usr/bin/patroni
+ sudo ln -s /usr/local/bin/patronictl /usr/bin/patronictl
+ python3 -m pip show patroni
+ sudo python3 -m pip install -U setuptools
+ sudo python3 -m pip install etcd3==0.10.0
+ sudo python3 -m pip show etcd3
+ yum install etcd-3.3.11
+ sudo yum install etcd-3.3.11
+ sudo rm -rf /var/lib/etcd/*
+ sudo rm -rf /etc/etcd/etcd.yml
+ sudo systemctl disable etcd
+ sudo rm -rf /etc/systemd/system/etcd.service
+ sudo systemctl start iptables
+ sudo yum install -y keepalived
+ sudo yum install -y firewalld
+ sudo vi /etc/selinux/config
+ history
