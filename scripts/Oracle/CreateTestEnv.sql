@@ -7,6 +7,9 @@ grant connect,resource to testman;
 
 create sequence testman.TestSeqIns;
 
-create table testman.TestIns(eventid number,eventdate date);
+CREATE TABLE testman.TestIns (
+  eventid NUMBER PRIMARY KEY,
+  eventdate DATE
+);
 
 
